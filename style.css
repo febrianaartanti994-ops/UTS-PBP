@@ -1,0 +1,366 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 60px;
+  z-index: 900;
+  background: transparent;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #505e1a;
+}
+
+nav a {
+  margin: 0 14px;
+  color: #b46a72;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.hero-butterfly {
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  gap: 0;
+  will-change: transform;
+}
+
+.butterfly1 {
+  width: 300px;
+  display: block;
+  position: absolute;
+  z-index: 3;
+  transform: translateY(-10vh);
+  top: -100px;
+}
+
+.butterfly2 {
+  width: 200px;
+  display: block;
+  position: absolute;
+  z-index: 3;
+  transform: translateY(10vh);
+  top: -8px;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 60px;
+  background: url(assets/hero-bg.png) center/cover no-repeat;
+}
+
+.hero-tittle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(5rem, 8vw, 20rem);
+  text-transform: uppercase;
+  z-index: 5;
+  pointer-events: none;
+  white-space: nowrap;
+  text-align: center;
+  color: #9b3047;
+}
+
+.hero-bunga {
+  position: absolute;
+  bottom: -25%;
+  width: 45%;
+  max-width: 900px;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.bunga-kiri {
+  left: 10%;
+  transform-origin: center bottom;
+}
+
+.bunga-kanan {
+  right: 10%;
+  transform-origin: center bottom;
+}
+
+.flower-wrap {
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 300px;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.flower {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160;
+  padding: 20px 18px;
+  opacity: 0;
+}
+
+.flw-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.curve-svg {
+  position: absolute;
+  align-items: center;
+  inset: 0;
+  width: 1000px;
+  left: 50%;
+  top: 50%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.curve-path {
+  stroke: transparent;
+  align-items: center;
+}
+
+.contain {
+  position: relative;
+  display: flex;
+  background: url(assets/contain-bg.png) center/cover no-repeat;
+  padding: 60px 40px;
+  z-index: 100;
+  min-width: 100vh;
+  color: #872c59;
+}
+
+.contain-iner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contain-left {
+  width: 50%;
+  min-width: 300px;
+  text-align: center;
+}
+
+.contain-sub {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.contain-name {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: 800;
+  line-height: 1.5;
+  margin-bottom: 70px;
+}
+
+.contain-sub-date {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.contain-date {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.contain-time {
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-bottom: 15px;
+}
+
+.containt-tPlace {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.contain-place {
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-bottom: 15px;
+}
+
+.Gift {
+  position: relative;
+  z-index: 100;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+  padding: 60px max(40px, calc((100% - 1200px) / 2 + 24px));
+  background: url("assets/gift.png") center / cover no-repeat;
+}
+
+.gift-here {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #9b3047;
+}
+
+.qris {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.rsvp {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 6vw;
+  background: url("assets/bgt.png") center / cover no-repeat;
+}
+
+.rsvp-form {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 460px;
+  padding: 40px 40px 44px;
+  color: #7a3f1d;
+  background: rgba(255, 248, 240, 0.75);
+  backdrop-filter: blur(30%);
+}
+
+.rsvp-title {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 96px;
+  line-height: 1;
+}
+
+.rsvp-note {
+  margin: 10px 0 30px;
+  font-size: 28px;
+}
+
+.rsvp-choice {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 34px;
+}
+
+.rsvp-radio {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.rsvp-radio input {
+  position: absolute;
+  opacity: 0;
+}
+
+.rsvp-dot {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #7a3f1d;
+  border-radius: 50%;
+  box-sizing: border-box;
+  transition: background 0.2s;
+}
+
+.rsvp-radio input:checked + .rsvp-dot {
+  background: #7a3f1d;
+}
+
+.rsvp-label {
+  display: block;
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.rsvp-form input[type="text"] {
+  display: block;
+  width: 100%;
+  height: 44px;
+  padding: 8px 0 4px;
+  border: 0;
+  border-bottom: 1px solid #7a3f1d;
+  border-radius: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+}
+
+.rsvp-form button {
+  margin-top: 36px;
+  padding: 12px 34px;
+  border: 1px solid #7a3f1d;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.rsvp-form button:hover {
+  background: #7a3f1d;
+  color: #fff;
+}
