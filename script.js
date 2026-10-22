@@ -228,3 +228,13 @@ flyOut.to(
   },
   0,
 );
+
+const bgm = document.getElementById("bgm");
+
+bgm.volume = 1;
+
+window.addEventListener("load", () => {
+  bgm.play().catch((error) => {
+    console.log("Autoplay diblokir browser:", error);
+  });
+});
