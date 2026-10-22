@@ -231,7 +231,7 @@ flyOut.to(
 
 const bgm = document.getElementById("bgm");
 
-bgm.volume = 1;
+bgm.volume = 2;
 
 window.addEventListener("load", () => {
   bgm.play().catch((error) => {
